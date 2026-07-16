@@ -1,52 +1,3 @@
-
-<!-- 
- 
-Practice: Portfolio Page
-
-Instructions
-You will create a static HTML portfolio page that includes various HTML tags, a
-contact form, and a table showcasing your skills or experience. This activity will help
-you practice structuring content, incorporating forms, and organizing data with
-tables.
-
-Tasks
-
-Step 1: Plan the Portfolio Page
-Before coding, students will plan the structure of their portfolio page. The page
-should include:
-1. A Header: Contains the name and a brief tagline.
-2. An "About Me" Section: Includes a paragraph about themselves.
-3. A Skills Table: Displays a list of skills or tools with proficiency levels in a table
-format.
-4. A Contact Form: Allows visitors to send a message, including fields for the
-visitor's name, email, and message.
-
-Step 2: Create the HTML Structure
-1. Use semantic tags like <header>, <section>, and <footer> to organize the
-page.
-2. Create a table with appropriate headers (<th>), rows (<tr>), and cells (<td>).
-3. Add a form with labels, input fields, and a submit button. The form should
-use:
-1
-○ type="text" for the name field.
-○ type="email" for the email field.
-○ <textarea> for the message field.
-4. Use other relevant tags, such as <h1>, <p>, <ul>, or <img>, to enhance the
-design.
-
-Step 3: Test and Review
-Once the page is complete, you should:
-1. Test the form to ensure all fields are correctly labeled.
-2. Check the table for proper alignment and formatting.
-3. Review the code to ensure proper use of tags and attributes.
-Example Structure
-● Header
-● About Me Section
-● Skills Table
-● Contact Form 
-
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,77 +9,85 @@ Example Structure
 </head>
 <body>
     
-    <header>
+    <header id="page-header">
         <h1>Brian Taylor</h1>
         <p>Cybersecurity student, problem solver, and future technology professional.</p>
+
+        <p>
+            <a href="practice-portfolio-page.html">Portfolio</a>
+            <br>
+            <a href="profile.html">Profile</a>
+        </p>
     </header>
 
-    <main>
+    <section class="about-section">
+        <h2>About Me</h2>
 
-        <section>
-            <h2>About Me</h2>
-            <p>
-                Hello! My name is Brian Taylor. I am currently building my skills in
-                web development, JavaScript, cybersecurity, and technical problem solving.
-            </p>
-        </section>
+        <p>
+            Hello! My name is Brian Taylor. I am currently building my skills in
+            web development, JavaScript, cybersecurity, and technical problem solving.
+        </p>
+    </section>
 
-        <section>
-            <h2>My Skills</h2>
+    <section class="skills-section">
+        <h2>My Skills</h2>
 
-            <table border="1">
-                <tr>
-                    <th>Skill or Tool</th>
-                    <th>Category</th>
-                </tr>
-                <tr>
-                    <td>HTML</td>
-                    <td>Web Development</td>
-                </tr>
-                <tr>
-                    <td>CSS</td>
-                    <td>Web Design</td>
-                </tr>
-                <tr>
-                    <td>JavaScript</td>
-                    <td>Programming</td>
-                </tr>
-                <tr>
-                    <td>Cybersecurity</td>
-                    <td>Security</td>
-                </tr>
+        <table border="1">
+            <tr>
+                <th>Skill or Tool</th>
+                <th>Category</th>
+            </tr>
 
-            </table>
-        </section>
+            <tr>
+                <td>HTML</td>
+                <td>Web Development</td>
+            </tr>
 
-        <section>
-            <h2>Contact Me</h2>
+            <tr>
+                <td>CSS</td>
+                <td>Web Design</td>
+            </tr>
 
-            <form>
-                <label for="visitorName">Name:</label>
-                <br>
-                <input type="text" id="visitorName" name="visitorName">
-                <br><br>
+            <tr>
+                <td>JavaScript</td>
+                <td>Programming</td>
+            </tr>
 
-                <label for="visitorEmail">Email:</label>
-                <br>
-                <input type="email" id="visitorEmail" name="visitorEmail">
-                <br><br>
+            <tr>
+                <td>Cybersecurity</td>
+                <td>Security</td>
+            </tr>
+        </table>
+    </section>
 
-                <label for="visitorMessage">Message:</label>
-                <br>
-                <textarea id="visitorMessage" name="visitorMessage" rows="5" cols="40"></textarea>
-                <br><br>
+    <section class="contact-section">
+        <h2>Contact Me</h2>
 
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+        <form>
+            <label for="visitorName">Name:</label>
+            <br>
+            <input type="text" id="visitorName" name="visitorName">
+            <br><br>
 
-    </main>
+            <label for="visitorEmail">Email:</label>
+            <br>
+            <input type="email" id="visitorEmail" name="visitorEmail">
+            <br><br>
 
-    <footer>
+            <label for="visitorMessage">Message:</label>
+            <br>
+            <textarea id="visitorMessage" name="visitorMessage" rows="5" cols="40"></textarea>
+            <br><br>
+
+            <button type="submit" id="submitButton">Send Message</button>
+        </form>
+    </section>
+
+    <footer id="page-footer">
         <p>&copy; 2026 Brian Taylor. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

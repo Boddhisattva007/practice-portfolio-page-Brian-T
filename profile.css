@@ -13,6 +13,10 @@ body {
     padding: 25px;
 }
 
+#page-header a {
+    color: white;
+}
+
 nav {
     text-align: center;
     padding: 10px;
@@ -64,7 +68,8 @@ h2 {
 
 table {
     background-color: white;
-    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 th {
